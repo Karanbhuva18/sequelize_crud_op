@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: nodejs-app
+    env: node
+    region: oregon  # Or use another region
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: DATABASE_FILE
+        value: ./src/database/db.sqlite 
